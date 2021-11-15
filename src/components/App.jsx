@@ -1,14 +1,24 @@
 import React, { Component } from 'react';
+import DisplayName from './DisplayName/DisplayName';
 
 class App extends Component{
     constructor(props){
         super(props); 
-        this.state = {};
+        this.state = {}
+
+        this.name = {
+            firstName: 'Reggie',
+            lastName: 'White'
+        }
+
+        this.nameList = {
+            names: ['Mike', 'Nevin', 'Aaron', 'Tory', 'Kelly']
+        }
     }
 
     render() {
         return (
-            <h1>Our React App from A Component File</h1>
+            <DisplayName firstName={this.name.firstName} lastName={this.name.lastName}/>
         )
     }
     
