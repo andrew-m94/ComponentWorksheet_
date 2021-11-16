@@ -12,21 +12,13 @@ function SuperheroTable(props) {
                 </tr>
                 </thead>
                 <tbody>
-                    <tr>
                     {props.heroTable.map(superheroes => (
-                        <td key={superheroes.superheroId}>{superheroes.name}</td>
+                        <tr key={superheroes.superheroId}>
+                            <td >{superheroes.name}</td>
+                            <td >{superheroes.primaryAbility}</td>
+                            <td >{superheroes.secondaryAbility}</td>
+                        </tr>
                     ))}
-                    </tr>
-                    <tr>
-                    {props.heroTable.map(superheroes => (
-                        <td key={superheroes.superheroId}>{superheroes.primaryAbility}</td>
-                    ))}
-                    </tr>
-                    <tr>
-                    {props.heroTable.map(superheroes => (
-                        <td key={superheroes.superheroId}>{superheroes.secondaryAbility}</td>
-                    ))}
-                    </tr>
                 </tbody>
             </table>
         </div>
